@@ -1,0 +1,19 @@
+{
+  "name": "vmware-homepage",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pingw206/vmware-website.git"
+  },
+  "author": "pingw206",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pingw206/vmware-website/issues"
+  },
+  "homepage": "https://github.com/pingw206/vmware-website#readme"
+}
