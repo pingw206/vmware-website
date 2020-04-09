@@ -19,15 +19,78 @@
     <div class="wrapper">
         <header>
             <div class="header-group" id="utiltybarheader">
-                <div class="container">
-                    <div class="topheader clearfix">
+                <div class="re-container">
+                    <div class="top-header clearfix">
+                        <!-- ::before ??? -->
                         ::before
+                        <!-- hdr:header-left :Logo-->
                         <div class="hdr-left">
-                            <div class="hdr-top-logo"></div>
+                            <div class="hdr-top-logo">
+                                <a href="/cn.html" target="_self">
+                                    <!-- aria与role都是给不方便人士设置的 -->
+                                    <img alt="VMware Logo" aria-label="VMware Logo" src="img/nav-img/vm-logo.png">
+                                </a>
+                            </div>
+                        </div>
+                        <!-- header-right:link group -->
+                        <div class="hdr-right">
+                            <div class="hdr-link-group">
+                                <!-- 搜索放大镜按钮 -->
+                                <div class="hdr-link">
+                                    <!-- form-action 描述表单提交时向哪里发送数据 -->
+                                    <form action="//www.vmware.com/cn/search.html" id="globalsearch" class="wrapperSearch">
+                                        <!-- 搜索框是隐藏状态 通过class="input-hidden"来调-->
+                                        <div class="hdr-search">
+                                            <input type="text" name="q" id="ub-search" class="input-hidden" placeholder="搜索" aria-roledescription="searchbox" role="seaarchbox">
+                                            <!-- 搜索按钮是空链接  -->
+                                            <a href="javascript:void(0);" aria-label="Search vmware.com" name="">
+                                                <span class="re-icon re-lens">
+                                                    <!-- ???after -->
+                                                    ::after
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <!-- ??为什么需要很多input?? -->
+                                        <input type="hidden" name="num" value="20">
+                                    </form>
+                                </div>
+                                <button>
+                                    <!-- 不知道什么用处，没写 -->
+                                </button>
+                                <!-- 搜索按钮右边的一堆 -->
+                                <div id="hdr-mobile-group" class="hdr-mobile-group collapse navbar-collapse">
+                                    ::before
+                                    <!-- 地球+中国 容器-->
+                                    <div class="hdr-link">
+                                        <!-- 地球+中国 里面 -->
+                                        <div class="locale">
+                                            <a href="/cn/worldwide.html" target="_self">
+                                                <span class="re-icon ic-globe">
+                                                    ::after
+                                                </span>
+                                                <span>中国</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <!-- 电话图标+号码 -->
+                                    <div class="hdr-link">
+                                        <div class="re-icon ic-mobile">
+                                            ::after
+                                        </div>
+                                        <div>
+                                            <a href="javascript:void(0);" onclick="window.location='tel:+4008160688';" class="ic-pipe">
+                                                "400-816-0688"
+                                                ::after
+                                            </a>
+                                        </div>
+
+                                    </div>
+                                    <!-- 社区+采购 -->
+                                </div>
+                            </div>
                         </div>
                         
                     </div>
-
                 </div>
             </div>
         </header>
