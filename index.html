@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="css/normalize.css"/>
     <!-- 引入基本公共样式 -->
     <link rel="stylesheet" href="css/base.css">
-    
+
 
 </head>
 <body>
@@ -21,9 +21,7 @@
             <div class="header-group" id="utiltybarheader">
                 <div class="re-container">
                     <div class="top-header clearfix">
-                        <!-- ::before ??? -->
-                        ::before
-                        <!-- hdr:header-left :Logo-->
+                        <!-- 模块1： Logo-->
                         <div class="hdr-left">
                             <div class="hdr-top-logo">
                                 <a href="/cn.html" target="_self">
@@ -32,10 +30,10 @@
                                 </a>
                             </div>
                         </div>
-                        <!-- header-right:link group -->
+                        <!-- 模块2-6:link group -->
                         <div class="hdr-right">
                             <div class="hdr-link-group">
-                                <!-- 搜索放大镜按钮 -->
+                                <!-- 模块2: 搜索放大镜按钮 -->
                                 <div class="hdr-link">
                                     <!-- form-action 描述表单提交时向哪里发送数据 -->
                                     <form action="//www.vmware.com/cn/search.html" id="globalsearch" class="wrapperSearch">
@@ -45,8 +43,6 @@
                                             <!-- 搜索按钮是空链接  -->
                                             <a href="javascript:void(0);" aria-label="Search vmware.com" name="">
                                                 <span class="re-icon re-lens">
-                                                    <!-- ???after -->
-                                                    ::after
                                                 </span>
                                             </a>
                                         </div>
@@ -55,18 +51,19 @@
                                     </form>
                                 </div>
                                 <button>
-                                    <!-- 不知道什么用处，没写 -->
+                                    <!-- 不知道什么用处-->
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
                                 </button>
                                 <!-- 搜索按钮右边的一堆 -->
                                 <div id="hdr-mobile-group" class="hdr-mobile-group collapse navbar-collapse">
-                                    ::before
                                     <!-- 地球+中国 容器-->
                                     <div class="hdr-link">
                                         <!-- 地球+中国 里面 -->
                                         <div class="locale">
                                             <a href="/cn/worldwide.html" target="_self">
                                                 <span class="re-icon ic-globe">
-                                                    ::after
                                                 </span>
                                                 <span>中国</span>
                                             </a>
@@ -75,23 +72,52 @@
                                     <!-- 电话图标+号码 -->
                                     <div class="hdr-link">
                                         <div class="re-icon ic-mobile">
-                                            ::after
                                         </div>
                                         <div>
                                             <a href="javascript:void(0);" onclick="window.location='tel:+4008160688';" class="ic-pipe">
-                                                "400-816-0688"
-                                                ::after
+                                                400-816-0688
                                             </a>
                                         </div>
 
                                     </div>
                                     <!-- 社区+采购 -->
+                                    <div class="hdr-link">
+                                        <div>
+                                            <!-- a:name是页面内书签，跳转用的，这里好像没用吧？ -->
+                                            <a href="https://blogs.vmware.com/china/" target="_blank" title="社区" class="ic-pipe" name="&lpos=nav_utility : 3&le=event52,event75">
+                                                社区
+                                            </a>
+                                            <a href="https://store.vmware.com/store/vmware/zh_CN/home" target="_blank" title="采购" class="ic-pipe" onclick="addCTracking('nav_utility : store');" name="&lpos=nav_utility : 4&le=event52,event75">
+                                                采购
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <!-- 登录 -->
+                                    <div class="hdr-link">
+                                        <div>
+                                            <a href="javascript:void(0);" title="登录" class="hdr-login" aria-haspopup="true" aria-expanded="false">
+                                                登录
+                                                <i class="fa fa-chevron-right" aria-hidden="true">
+                                                </i>
+                                            </a>
+                                        </div>
+                                        <div class="hdr-login-box slide-down" role="menu" aria-label="login">
+                                            <ul>
+                                                <li>
+                                                    <a href="https://my.vmware.com/cn/web/vmware/login" target="_blank" title="My VMware">My VMware</a>
+                                                </li>
+                                                <li>
+                                                    <a href="/go/partnerconnect" target="_blank" title="Partner Connect">Partner Connect</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        
                     </div>
                 </div>
+                <div class="gradient-hr"></div>
             </div>
         </header>
     </div>
