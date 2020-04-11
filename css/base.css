@@ -1,0 +1,13 @@
+.re-container {
+    padding: 0 50px;
+}
+
+.top-header {
+    padding: 25px 0px 10px;
+}
+
+
+.re-icon {
+    display: inline-block;
+    background: url("../img/nav-img/icons.png") no-repeat;
+}
