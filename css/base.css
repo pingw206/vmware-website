@@ -1,13 +1,107 @@
+html {
+    font-family: sans-serif;
+}
+body {
+    margin: 0
+}
+
 .re-container {
     padding: 0 50px;
 }
 
 .top-header {
     padding: 25px 0px 10px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
-
-
+.hdr-left {
+    float: left;
+    max-width: 150px;
+}
+.hdr-right {
+    float: left;
+    width: calc(100%-150px);
+}
+.hdr-link-group {
+    float: right;
+}
+.hdr-link {
+    float: left;
+    padding: 0 8px;
+    position: relative;
+}
+.hdr-link>div {
+    display: inline-block;
+    vertical-align: top;
+}
+.hdr-link a {
+    font-size: 16px;
+    color: #1e428a;
+    display: inline-block
+}
+.hdr-link span{
+    vertical-align: top;
+}
+.hdr-link:hover .re-icon{
+    background-image: url("../img/nav-img/icons-highlighted.png");
+}
+/* ??? */
+.hdr-link a i{
+    font-size: 12px;
+    transition: 200ms linear;
+    padding-left: 7px;
+}
 .re-icon {
     display: inline-block;
+    height: 25px;
+    width: 22px;
     background: url("../img/nav-img/icons.png") no-repeat;
+    background-position-y: center;
+    margin-top: -3px;
+}
+/* 下面分别控制x轴位置来实现三个小图标 */
+.re-icon.ic-lens {
+    background-position-x:3px ;
+}
+.re-icon.ic-globe {
+    background-position-x:-28px ;
+}
+.re-icon.ic-mobile {
+    background-position-x:-60px ;
+}
+/* 隐藏搜索输入框 */
+.hdr-search input.input-hidden{
+    visibility: hidden;
+}
+.hdr-search {
+    position: relative;
+}
+/* 隐藏登录框 */
+.hdr-link .hdr-login-box {
+    position: absolute;
+    min-width: 130px;
+    border: 1px solid #003d79;
+    border-radius: 3px;
+    padding: 5px 10px;
+    left:50%;
+    top: 30px;
+    transform: translate(-50%);
+    opacity: 0;
+    transition: 200ms linear;
+    z-index: -10;
+    visibility: hidden;
+    display: none
+}
+.hdr-login-box.slide-down {
+    opacity: 1;
+    z-index: 10;
+    visibility: visible;
+    display: block;
+}
+.hdr-login-box a{
+    font-size: 13px
+}
+.hdr-login-box ul{
+    margin: 0
 }
