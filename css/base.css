@@ -1,8 +1,11 @@
 html {
     font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%
 }
 body {
-    margin: 0
+    margin: 0;
+    box-sizing: border-box;
 }
 
 .re-container {
@@ -15,13 +18,17 @@ body {
     flex-direction: column;
     height: 100%;
 }
+
 .hdr-left {
     float: left;
     max-width: 150px;
 }
 .hdr-right {
     float: left;
-    width: calc(100%-150px);
+    width: calc(100% - 150px);
+}
+.hdr-right a {
+    text-decoration: none;
 }
 .hdr-link-group {
     float: right;
@@ -31,7 +38,7 @@ body {
     padding: 0 8px;
     position: relative;
 }
-.hdr-link>div {
+.hdr-link-group>div {
     display: inline-block;
     vertical-align: top;
 }
@@ -43,14 +50,18 @@ body {
 .hdr-link span{
     vertical-align: top;
 }
-.hdr-link:hover .re-icon{
-    background-image: url("../img/nav-img/icons-highlighted.png");
+
+.hdr-link:hover .re-icon+div a {
+    color: #0091da;
 }
-/* ??? */
-.hdr-link a i{
-    font-size: 12px;
-    transition: 200ms linear;
-    padding-left: 7px;
+.hdr-link .ic-pipe:after {
+    content:"|";
+    padding-left: 15px;
+    color: #1e428a;
+}
+.re-icon:after {
+    content:"";
+    background-image: url("../img/nav-img/icons-highlighted.png");
 }
 .re-icon {
     display: inline-block;
@@ -60,6 +71,26 @@ body {
     background-position-y: center;
     margin-top: -3px;
 }
+.hdr-link:hover .re-icon{
+    background-image: url("../img/nav-img/icons-highlighted.png");
+}
+/* ??? */
+.hdr-link a i{
+    font-size: 12px;
+    transition: 200ms linear;
+    padding-left: 7px;
+}
+.hdr-mobile-group {
+    float: left;
+    padding: 0;
+}
+#hdr-mobile-group .hdr-link:first-child {
+    padding-right: 14px;
+}
+.hdr-link:nth-child(3)>div:last-child a {
+    padding-left: 9px;
+}
+
 /* 下面分别控制x轴位置来实现三个小图标 */
 .re-icon.ic-lens {
     background-position-x:3px ;
@@ -77,10 +108,14 @@ body {
 .hdr-search {
     position: relative;
 }
-/* 隐藏登录框 */
-.hdr-link .hdr-login-box {
+/* 是在JS里用class rotate吗 */
+.hdr-link .fa-chevron-right.rotate {
+    transform: rotate(90deg)
+}
+
+.hdr-link .hdr-login-box{
     position: absolute;
-    min-width: 130px;
+    min-width: 110px;
     border: 1px solid #003d79;
     border-radius: 3px;
     padding: 5px 10px;
@@ -90,18 +125,65 @@ body {
     opacity: 0;
     transition: 200ms linear;
     z-index: -10;
-    visibility: hidden;
-    display: none
 }
+/* ？？？下面两条伪类是设置盒子上面的三角尖尖 
+transform: translate(-50%); x轴向左平移50% */
+.hdr-login-box:before {
+    border-bottom: 8px solid #003d79;
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    position: absolute;
+    top: -8px;
+    left: 50%;
+    transform: translate(-50%); 
+}
+.hdr-login-box:after{
+    border-bottom: 7px solid #fff;
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    position: absolute;
+    top: -7px;
+    left: 50%;
+    transform: translate(-50%);
+}
+/* 隐藏登录框 */
 .hdr-login-box.slide-down {
     opacity: 1;
     z-index: 10;
-    visibility: visible;
+    visibility: hidden;
     display: block;
 }
 .hdr-login-box a{
     font-size: 13px
 }
 .hdr-login-box ul{
-    margin: 0
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+.header {
+    height: 58px;
+}
+.header-group {
+    position: fixed;
+    width: 100%;
+    height: 58px;
+    z-index: 101;
+    top: 0;
+    animation: smoothScroll 700ms forwards;
+}
+.gradient-hr {
+    content: "";
+    background: url(../img/nav-img/nav-marker.png) #5a39a0;
+    background-repeat: no-repeat;
+    height: 8px;
+    width: 100%;
+    display: block;
+    position: relative
 }
