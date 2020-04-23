@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,113 +10,66 @@
     <!-- 引入ico图标 -->
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <!-- 引入CSS初始化文件，在不同浏览器上的高度一致性 -->
-    <link rel="stylesheet" href="css/normalize.css"/>
+    <link rel="stylesheet" href="css/normalize.css" />
     <!-- 引入基本公共样式 -->
     <link rel="stylesheet" href="css/base.css">
     <!-- 引入font-swesome -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
 
 </head>
-<body>
-    <div class="wrapper">
-        <header>
-            <div class="header-group" id="utiltybarheader">
-                <div class="re-container">
-                    <div class="top-header">
-                        <!-- 模块1 Logo：hdr-left -->
-                        <div class="hdr-left">
-                            <div class="hdr-top-logo">
-                                <a href="/cn.html" target="_self">
-                                    <!-- aria与role都是给不方便人士设置的 -->
-                                    <img alt="VMware Logo" aria-label="VMware Logo" src="img/nav-img/vm-logo.png">
-                                </a>
-                            </div>
-                        </div>
-                        <!-- 模块2-6容器:hdr-right -->
-                        <div class="hdr-right">
-                            <!-- 模块2-6 内部hdr-link-group -->
-                            <div class="hdr-link-group">
-                                <!-- 模块2: 搜索框&放大镜 hdr-link-->
-                                <div class="hdr-link">
-                                    <!-- form-action 描述表单提交时向哪里发送数据 -->
-                                    <form action="//www.vmware.com/cn/search.html" id="globalsearch" class="wrapperSearch">
-                                        <!-- 搜索框是隐藏状态 通过class="input-hidden"来调-->
-                                        <div class="hdr-search">
-                                            <input type="text" name="q" id="ub-search" class="input-hidden" placeholder="搜索" aria-roledescription="searchbox" role="seaarchbox">
-                                            <!-- 搜索按钮是空链接  -->
-                                            <a href="javascript:void(0);" aria-label="Search vmware.com" name="">
-                                                <!-- 所有re-icon 放大镜re-lens  -->
-                                                <span class="re-icon re-lens">
-                                                </span>
-                                            </a>
-                                        </div>
-                                        <!-- ??为什么需要很多input?? -->
-                                        <input type="hidden" name="num" value="20">
-                                    </form>
-                                </div>
-                                <!-- 模块3-6 hdr-mobile-group 搜索按钮右边的一堆 -->
-                                <div id="hdr-mobile-group" class="hdr-mobile-group collapse navbar-collapse">
-                                    <!-- 模块3 地球+中国 容器-->
-                                    <div class="hdr-link">
-                                        <!-- 地球+中国ic-globe 里面 -->
-                                        <div class="locale">
-                                            <a href="/cn/worldwide.html" target="_self">
-                                                <span class="re-icon ic-globe">
-                                                </span>
-                                                <span>中国</span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <!-- 模块4 电话图标+号码 ic-mobile, ic-pipe-->
-                                    <div class="hdr-link">
-                                        <span class="re-icon ic-mobile"></span>
-                                        <span>
-                                            <a href="javascript:void(0);" onclick="window.location='tel:+4008160688';" class="ic-pipe">
-                                                400-816-0688
-                                            </a>
-                                        </span>
 
-                                    </div>
-                                    <!-- 模块5 社区+采购 ic-pipe -->
-                                    <div class="hdr-link">
-                                        <div>
-                                            <!-- a:name是页面内书签，跳转用的，这里好像没用吧？ -->
-                                            <a href="https://blogs.vmware.com/china/" target="_blank" title="社区" class="ic-pipe" name="&lpos=nav_utility : 3&le=event52,event75">
-                                                社区
-                                            </a>
-                                            <a href="https://store.vmware.com/store/vmware/zh_CN/home" target="_blank" title="采购" class="ic-pipe" onclick="addCTracking('nav_utility : store');" name="&lpos=nav_utility : 4&le=event52,event75">
-                                                采购
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <!-- 模块6 登录 -->
-                                    <div class="hdr-link">
-                                        <div>
-                                            <a class="hdr-login" href="javascript:void(0);" title="登录"  aria-haspopup="true" aria-expanded="false">
-                                                登录
-                                                <i class="fa fa-chevron-right" aria-hidden="true">
-                                                </i>
-                                            </a>
-                                        </div>
-                                        <div class="hdr-login-box slide-down" role="menu" aria-label="login">
-                                            <ul>
-                                                <li>
-                                                    <a href="https://my.vmware.com/cn/web/vmware/login" target="_blank" title="My VMware">My VMware</a>
-                                                </li>
-                                                <li>
-                                                    <a href="/go/partnerconnect" target="_blank" title="Partner Connect">Partner Connect</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+<body>
+    <!-- header start -->
+    <header>
+        <div class="w">
+            <div class="top-header">
+                <!-- Logo  -->
+                <div class="hdr-left">
+                    <a href="/cn.html" target="_self">
+                        <img alt="VMware Logo" src="images/nav-img/vm-logo.png">
+                    </a>
                 </div>
-                <div class="gradient-hr"></div>
+                <!-- logo右侧 -->
+                <div class="hdr-right">
+                    <ul>
+                        <li >
+                            <a href="#" class="ic-icon ic-lens"></a>
+                        </li>
+                        <li >
+                            <a href="#" class="ic-icon"></a>
+                        </li>
+                        <li>
+                            <a href="#">中国</a>
+                        </li>
+                        <li>
+                            <a href="#"  class="ic-icon"></a>
+                        </li>
+                        <li>
+                            <a href="#">400-816-0688</a>
+                        </li>
+                        <li class="space"></li>
+                        <li>
+                            <a href="#">社区</a>
+                        </li>
+                        <li class="space"></li>
+                        <li>
+                            <a href="#">采购</a>
+                        </li>
+                        <li class="space"></li>
+                        <li>
+                            <a href="#">登录</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-chevron-right"></i></a>
+                        </li>
+                    </ul>   
+                </div>
             </div>
-        </header>
-    </div>
+        </div>      
+    </header>
+    <!-- header end -->
+
+
 </body>
 </html>

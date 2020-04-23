@@ -1,8 +1,176 @@
+/* 清除外边距 */
+blockquote,body,button,dd,dl,dt,fieldset,form,h1,h2,h3,h4,h5,h6,hr,input,legend,li,ol,p,pre,td,textarea,th,ul {
+    margin: 0;
+    padding: 0;
+}
+
 html {
     font-family: sans-serif;
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%
 }
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #1e428a;
+}
+a:hover {
+    color:#0091da
+}
+/* 版心 */
+.w {
+    width: 1164px;
+    margin: 0 auto;
+}
+/* header start */
+header {
+    height: 115px;
+}
+.top-header {
+    height: 26px;
+    margin: 24px 0;
+    padding: 0;
+    width: 100%;
+}
+.hdr-left {
+    float: left;
+}
+.hdr-right {
+    float: right;
+}
+.hdr-right li {
+    float: left;
+}
+.hdr-right .ic-icon {
+    background: url("../images/nav-img/icons.png") no-repeat;
+    width: 22px;
+    height: 22px;
+    display: inline-block;
+    margin:5px 8px;
+}
+.hdr-right li:nth-child(2) .ic-icon{
+    background-position: -28px 0;
+}
+.hdr-right li:nth-child(4) .ic-icon{
+    background-position: -60px 0;
+}
+.hdr-right li:nth-child(3){
+    padding-right: 20px;
+}
+.hdr-right li:last-child{
+    margin-left: 10px;
+}
+.hdr-right li a{
+    height: 26px;
+    line-height: 26px;
+}
+.hdr-right .space {
+    display: inline-block;
+    height: 14px;
+    width: 1px;
+    margin: 7px 15px;
+    background-color: #1e428a;;
+}
+
+/* header end */
+
+/*
+                <div class="hdr-right">
+                    <!-- 模块2-6 内部hdr-link-group -->
+                    <div class="hdr-link-group">
+                        <!-- 模块2: 搜索框&放大镜 hdr-link-->
+                        <div class="hdr-link">
+                            <!-- form-action 描述表单提交时向哪里发送数据 -->
+                            <form action="//www.vmware.com/cn/search.html" id="globalsearch" class="wrapperSearch">
+                                <!-- 搜索框是隐藏状态 通过class="input-hidden"来调-->
+                                <div class="hdr-search">
+                                    <input type="text" name="q" id="ub-search" class="input-hidden" placeholder="搜索"
+                                        aria-roledescription="searchbox" role="seaarchbox">
+                                    <!-- 搜索按钮是空链接  -->
+                                    <a href="javascript:void(0);" aria-label="Search vmware.com" name="">
+                                        <!-- 所有re-icon 放大镜re-lens  -->
+                                        <span class="re-icon re-lens">
+                                        </span>
+                                    </a>
+                                </div>
+                                <!-- ??为什么需要很多input?? -->
+                                <input type="hidden" name="num" value="20">
+                            </form>
+                        </div>
+                        <!-- 模块3-6 hdr-mobile-group 搜索按钮右边的一堆 -->
+                        <div id="hdr-mobile-group" class="hdr-mobile-group collapse navbar-collapse">
+                            <!-- 模块3 地球+中国 容器-->
+                            <div class="hdr-link">
+                                <!-- 地球+中国ic-globe 里面 -->
+                                <div class="locale">
+                                    <a href="/cn/worldwide.html" target="_self">
+                                        <span class="re-icon ic-globe">
+                                        </span>
+                                        <span>中国</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- 模块4 电话图标+号码 ic-mobile, ic-pipe-->
+                            <div class="hdr-link">
+                                <span class="re-icon ic-mobile"></span>
+                                <span>
+                                    <a href="javascript:void(0);" onclick="window.location='tel:+4008160688';"
+                                        class="ic-pipe">
+                                        400-816-0688
+                                    </a>
+                                </span>
+
+                            </div>
+                            <!-- 模块5 社区+采购 ic-pipe -->
+                            <div class="hdr-link">
+                                <div>
+                                    <!-- a:name是页面内书签，跳转用的，这里好像没用吧？ -->
+                                    <a href="https://blogs.vmware.com/china/" target="_blank" title="社区" class="ic-pipe"
+                                        name="&lpos=nav_utility : 3&le=event52,event75">
+                                        社区
+                                    </a>
+                                    <a href="https://store.vmware.com/store/vmware/zh_CN/home" target="_blank"
+                                        title="采购" class="ic-pipe" onclick="addCTracking('nav_utility : store');"
+                                        name="&lpos=nav_utility : 4&le=event52,event75">
+                                        采购
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- 模块6 登录 -->
+                            <div class="hdr-link">
+                                <div>
+                                    <a class="hdr-login" href="javascript:void(0);" title="登录" aria-haspopup="true"
+                                        aria-expanded="false">
+                                        登录
+                                        <i class="fa fa-chevron-right" aria-hidden="true">
+                                        </i>
+                                    </a>
+                                </div>
+                                <div class="hdr-login-box slide-down" role="menu" aria-label="login">
+                                    <ul>
+                                        <li>
+                                            <a href="https://my.vmware.com/cn/web/vmware/login" target="_blank"
+                                                title="My VMware">My VMware</a>
+                                        </li>
+                                        <li>
+                                            <a href="/go/partnerconnect" target="_blank" title="Partner Connect">Partner
+                                                Connect</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div> -->
+    <div class="gradient-hr"></div>
+    </div> -->
+    */
+/* 
 body {
     margin: 0;
     box-sizing: border-box;
@@ -16,16 +184,18 @@ body {
     padding: 25px 0px 10px;
     display: flex;
     flex-direction: column;
-    height: 100%;
+    height: 100%
 }
 
 .hdr-left {
     float: left;
     max-width: 150px;
+
 }
 .hdr-right {
     float: left;
-    width: calc(100% - 150px);
+    width: calc(100% - 150px);  
+
 }
 .hdr-right a {
     text-decoration: none;
@@ -75,6 +245,7 @@ body {
     background-image: url("../img/nav-img/icons-highlighted.png");
 }
 /* ??? */
+/*
 .hdr-link a i{
     font-size: 12px;
     transition: 200ms linear;
@@ -92,7 +263,7 @@ body {
 }
 
 /* 下面分别控制x轴位置来实现三个小图标 */
-.re-icon.ic-lens {
+/* .re-icon.ic-lens {
     background-position-x:3px ;
 }
 .re-icon.ic-globe {
@@ -102,17 +273,17 @@ body {
     background-position-x:-60px ;
 }
 /* 隐藏搜索输入框 */
-.hdr-search input.input-hidden{
+/* .hdr-search input.input-hidden{
     visibility: hidden;
 }
 .hdr-search {
     position: relative;
 }
 /* 是在JS里用class rotate吗 */
-.hdr-link .fa-chevron-right.rotate {
+/* .hdr-link .fa-chevron-right.rotate {
     transform: rotate(90deg)
-}
-
+} */
+/* 
 .hdr-link .hdr-login-box{
     position: absolute;
     min-width: 110px;
@@ -125,10 +296,10 @@ body {
     opacity: 0;
     transition: 200ms linear;
     z-index: -10;
-}
-/* ？？？下面两条伪类是设置盒子上面的三角尖尖 
-transform: translate(-50%); x轴向左平移50% */
-.hdr-login-box:before {
+} */
+/* 下面两条伪类是设置盒子上面的三角尖尖 
+transform: translate(-50%); x轴向左平移50% */ 
+/* .hdr-login-box:before {
     border-bottom: 8px solid #003d79;
     content: "";
     width: 0;
@@ -151,9 +322,9 @@ transform: translate(-50%); x轴向左平移50% */
     top: -7px;
     left: 50%;
     transform: translate(-50%);
-}
+} */
 /* 隐藏登录框 */
-.hdr-login-box.slide-down {
+/* .hdr-login-box.slide-down {
     opacity: 1;
     z-index: 10;
     visibility: hidden;
@@ -186,4 +357,4 @@ transform: translate(-50%); x轴向左平移50% */
     width: 100%;
     display: block;
     position: relative
-}
+}  */ 
