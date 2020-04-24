@@ -74,287 +74,124 @@ header {
     margin: 7px 15px;
     background-color: #1e428a;;
 }
+/* header下半部分 */
+.bottom-header li{
+    float: left;
+}
+.bottom-header li a{
+    color: #000;
+    font-size: 16px;
+    padding: 15px 20px 13px;
+}
+.bottom-header li:first-child a{
+    margin-left: 0;
+    padding-left: 0;
+}
+.bottom-header li a:hover{
+    color:#24845C ;
 
+}
+/* header线 */
+.gradient-hr img{
+    margin-top: 15px;
+}
 /* header end */
 
-/*
-                <div class="hdr-right">
-                    <!-- 模块2-6 内部hdr-link-group -->
-                    <div class="hdr-link-group">
-                        <!-- 模块2: 搜索框&放大镜 hdr-link-->
-                        <div class="hdr-link">
-                            <!-- form-action 描述表单提交时向哪里发送数据 -->
-                            <form action="//www.vmware.com/cn/search.html" id="globalsearch" class="wrapperSearch">
-                                <!-- 搜索框是隐藏状态 通过class="input-hidden"来调-->
-                                <div class="hdr-search">
-                                    <input type="text" name="q" id="ub-search" class="input-hidden" placeholder="搜索"
-                                        aria-roledescription="searchbox" role="seaarchbox">
-                                    <!-- 搜索按钮是空链接  -->
-                                    <a href="javascript:void(0);" aria-label="Search vmware.com" name="">
-                                        <!-- 所有re-icon 放大镜re-lens  -->
-                                        <span class="re-icon re-lens">
-                                        </span>
-                                    </a>
-                                </div>
-                                <!-- ??为什么需要很多input?? -->
-                                <input type="hidden" name="num" value="20">
-                            </form>
-                        </div>
-                        <!-- 模块3-6 hdr-mobile-group 搜索按钮右边的一堆 -->
-                        <div id="hdr-mobile-group" class="hdr-mobile-group collapse navbar-collapse">
-                            <!-- 模块3 地球+中国 容器-->
-                            <div class="hdr-link">
-                                <!-- 地球+中国ic-globe 里面 -->
-                                <div class="locale">
-                                    <a href="/cn/worldwide.html" target="_self">
-                                        <span class="re-icon ic-globe">
-                                        </span>
-                                        <span>中国</span>
-                                    </a>
-                                </div>
-                            </div>
-                            <!-- 模块4 电话图标+号码 ic-mobile, ic-pipe-->
-                            <div class="hdr-link">
-                                <span class="re-icon ic-mobile"></span>
-                                <span>
-                                    <a href="javascript:void(0);" onclick="window.location='tel:+4008160688';"
-                                        class="ic-pipe">
-                                        400-816-0688
-                                    </a>
-                                </span>
-
-                            </div>
-                            <!-- 模块5 社区+采购 ic-pipe -->
-                            <div class="hdr-link">
-                                <div>
-                                    <!-- a:name是页面内书签，跳转用的，这里好像没用吧？ -->
-                                    <a href="https://blogs.vmware.com/china/" target="_blank" title="社区" class="ic-pipe"
-                                        name="&lpos=nav_utility : 3&le=event52,event75">
-                                        社区
-                                    </a>
-                                    <a href="https://store.vmware.com/store/vmware/zh_CN/home" target="_blank"
-                                        title="采购" class="ic-pipe" onclick="addCTracking('nav_utility : store');"
-                                        name="&lpos=nav_utility : 4&le=event52,event75">
-                                        采购
-                                    </a>
-                                </div>
-                            </div>
-                            <!-- 模块6 登录 -->
-                            <div class="hdr-link">
-                                <div>
-                                    <a class="hdr-login" href="javascript:void(0);" title="登录" aria-haspopup="true"
-                                        aria-expanded="false">
-                                        登录
-                                        <i class="fa fa-chevron-right" aria-hidden="true">
-                                        </i>
-                                    </a>
-                                </div>
-                                <div class="hdr-login-box slide-down" role="menu" aria-label="login">
-                                    <ul>
-                                        <li>
-                                            <a href="https://my.vmware.com/cn/web/vmware/login" target="_blank"
-                                                title="My VMware">My VMware</a>
-                                        </li>
-                                        <li>
-                                            <a href="/go/partnerconnect" target="_blank" title="Partner Connect">Partner
-                                                Connect</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-    </div> -->
-    <div class="gradient-hr"></div>
-    </div> -->
-    */
-/* 
-body {
-    margin: 0;
+/* banner 部分 start */
+.banner{
+    position: relative;
+}
+.banner img{
+    margin-top: -24px;
+    display: block;
+}
+.banner-content {
+    position: absolute;
+    top:0;
+    padding: 90px 0;
+    left: 55px;
+    height: 331px;
     box-sizing: border-box;
 }
-
-.re-container {
-    padding: 0 50px;
+.banner h2{
+    font-size: 28px;
+    line-height: 40px;
+    margin-bottom: 15px;
+    font-family: "SimHei";
+    font-weight: 150;
+    color: #565656;
 }
-
-.top-header {
-    padding: 25px 0px 10px;
-    display: flex;
-    flex-direction: column;
-    height: 100%
-}
-
-.hdr-left {
-    float: left;
-    max-width: 150px;
-
-}
-.hdr-right {
-    float: left;
-    width: calc(100% - 150px);  
-
-}
-.hdr-right a {
-    text-decoration: none;
-}
-.hdr-link-group {
-    float: right;
-}
-.hdr-link {
-    float: left;
-    padding: 0 8px;
-    position: relative;
-}
-.hdr-link-group>div {
-    display: inline-block;
-    vertical-align: top;
-}
-.hdr-link a {
+.banner p{
+    margin-bottom: 40px;
     font-size: 16px;
-    color: #1e428a;
-    display: inline-block
+    font-weight: 200px;
+    line-height: 22px;
+    color: #565656;
 }
-.hdr-link span{
-    vertical-align: top;
+.banner button{
+    background-color: #1D428A;
+    width: 106px;
+    height: 29px;
+    color: #ffffff;
+    border: none;
+    border-radius: 3px;
+    line-height: 29px;
+    margin-top: 5px;
 }
+.banner button:hover{
+    cursor: pointer;
+    background-color: #fff;
+    border: 1px solid #1D428A;
+    color: #1D428A;
+}
+/* banner 部分  end */
 
-.hdr-link:hover .re-icon+div a {
-    color: #0091da;
+/* 优先任务 start */
+.first-target {
+    height: 117px;
+    background-color: #f7f7f7;
+    color: #565656;
+    padding: 25px 50px;
+    box-sizing: border-box;
+    line-height: 67px;
+    
 }
-.hdr-link .ic-pipe:after {
-    content:"|";
-    padding-left: 15px;
-    color: #1e428a;
-}
-.re-icon:after {
-    content:"";
-    background-image: url("../img/nav-img/icons-highlighted.png");
-}
-.re-icon {
-    display: inline-block;
-    height: 25px;
-    width: 22px;
-    background: url("../img/nav-img/icons.png") no-repeat;
-    background-position-y: center;
-    margin-top: -3px;
-}
-.hdr-link:hover .re-icon{
-    background-image: url("../img/nav-img/icons-highlighted.png");
-}
-/* ??? */
-/*
-.hdr-link a i{
-    font-size: 12px;
-    transition: 200ms linear;
-    padding-left: 7px;
-}
-.hdr-mobile-group {
+.first-target p{
+    font-size: 26px;
+    font-weight: 200;
     float: left;
-    padding: 0;
-}
-#hdr-mobile-group .hdr-link:first-child {
-    padding-right: 14px;
-}
-.hdr-link:nth-child(3)>div:last-child a {
-    padding-left: 9px;
-}
+    width: 279px;
 
-/* 下面分别控制x轴位置来实现三个小图标 */
-/* .re-icon.ic-lens {
-    background-position-x:3px ;
 }
-.re-icon.ic-globe {
-    background-position-x:-28px ;
+.first-target ul{
+    float: right;
+    width: calc(100% - 279px);
+    
 }
-.re-icon.ic-mobile {
-    background-position-x:-60px ;
-}
-/* 隐藏搜索输入框 */
-/* .hdr-search input.input-hidden{
-    visibility: hidden;
-}
-.hdr-search {
+.first-target ul li{
+    float: left;
+    width: 20%;
+    height: 67px;
+    padding: 0 10px 0 2px;
+    box-sizing: border-box;
+    text-align: center; 
     position: relative;
 }
-/* 是在JS里用class rotate吗 */
-/* .hdr-link .fa-chevron-right.rotate {
-    transform: rotate(90deg)
-} */
-/* 
-.hdr-link .hdr-login-box{
-    position: absolute;
-    min-width: 110px;
-    border: 1px solid #003d79;
-    border-radius: 3px;
-    padding: 5px 10px;
-    left:50%;
-    top: 30px;
-    transform: translate(-50%);
-    opacity: 0;
-    transition: 200ms linear;
-    z-index: -10;
-} */
-/* 下面两条伪类是设置盒子上面的三角尖尖 
-transform: translate(-50%); x轴向左平移50% */ 
-/* .hdr-login-box:before {
-    border-bottom: 8px solid #003d79;
-    content: "";
-    width: 0;
-    height: 0;
-    border-left: 8px solid transparent;
-    border-right: 8px solid transparent;
-    position: absolute;
-    top: -8px;
-    left: 50%;
-    transform: translate(-50%); 
-}
-.hdr-login-box:after{
-    border-bottom: 7px solid #fff;
-    content: "";
-    width: 0;
-    height: 0;
-    border-left: 7px solid transparent;
-    border-right: 7px solid transparent;
-    position: absolute;
-    top: -7px;
-    left: 50%;
-    transform: translate(-50%);
-} */
-/* 隐藏登录框 */
-/* .hdr-login-box.slide-down {
-    opacity: 1;
-    z-index: 10;
-    visibility: hidden;
+.first-target li a{
     display: block;
+    
 }
-.hdr-login-box a{
-    font-size: 13px
+.first-target li img {
+    width: 75px;
+    height: 45px;
 }
-.hdr-login-box ul{
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-}
-.header {
-    height: 58px;
-}
-.header-group {
-    position: fixed;
+.first-target li span{
+    font-size: 16px;
+    position: absolute;
+    left: -2px;
+    height: 22px;
     width: 100%;
-    height: 58px;
-    z-index: 101;
-    top: 0;
-    animation: smoothScroll 700ms forwards;
+    bottom: 22px;
 }
-.gradient-hr {
-    content: "";
-    background: url(../img/nav-img/nav-marker.png) #5a39a0;
-    background-repeat: no-repeat;
-    height: 8px;
-    width: 100%;
-    display: block;
-    position: relative
-}  */ 
+
+/* 优先任务 end */
