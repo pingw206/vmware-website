@@ -15,14 +15,37 @@ ul {
 a {
     text-decoration: none;
     font-size: 16px;
-    color: #1e428a;
+    color: #1d428a;
 }
 a:hover {
-    color:#0091da
+    color:#0091da;
+    cursor: pointer;
+}
+h2 {
+    font-size: 33px;
+    font-weight: 200;
+    color: #565656;
+}
+p {
+    font-size: 16px;
+    color: #565656;
+    line-height: 22px;
+}
+button{
+    height: 32px;
+    background-color: #fff;
+    color: #1D428A;
+    border: 1px solid #1D428A;
+    border-radius: 4px;
+}
+button:hover{
+    background-color: #1D428A;
+    color: #fff;
+    cursor: pointer;
 }
 /* 版心 */
 .w {
-    width: 1164px;
+    width: 1165px;
     margin: 0 auto;
 }
 /* header start */
@@ -104,6 +127,7 @@ header {
 .banner img{
     margin-top: -24px;
     display: block;
+
 }
 .banner-content {
     position: absolute;
@@ -123,10 +147,7 @@ header {
 }
 .banner p{
     margin-bottom: 40px;
-    font-size: 16px;
     font-weight: 200px;
-    line-height: 22px;
-    color: #565656;
 }
 .banner button{
     background-color: #1D428A;
@@ -193,5 +214,219 @@ header {
     width: 100%;
     bottom: 22px;
 }
-
 /* 优先任务 end */
+
+/*  CEO资讯 start  */
+.col-mid{
+    height: 455px;
+    margin: 50px 0 0 0;
+    box-sizing: border-box;
+}
+.col-mid .fl {
+    float: left;
+    width: 572px;
+}
+.col-mid h2{
+    margin-bottom: 36px;
+}
+.col-mid p{
+    height: 198px;
+}
+.col-mid p i{
+    margin-bottom: 25px;
+}
+.col-mid button{
+    width: 156px;
+}
+
+.col-mid .fr {
+    float: right;
+}
+.col-mid img{
+    width: 572px;
+    height: 289px;  
+    margin-top:23px;
+}
+/*  CEO资讯 end  */
+
+/* 资讯和要点 start  */
+.four-col-container {
+    height: 437px;
+    box-sizing: border-box;
+}
+.four-col-container h2{
+    margin: 15px 0 36px;
+}
+.four-col-container img{
+    width: 276px;
+    height: 155px;
+}
+.four-col-container a{
+    display: block;
+}
+.four-col-container h4 a{
+    font-size: 23px;
+    font-weight: 200;
+    padding: 18px 0;
+}
+.four-col-container p{
+    margin-bottom: 25px;
+}
+.four-col-container ul li{
+    width: 276px;
+    float: left;
+    padding: 0 10px;
+}
+.four-col-container ul li:first-child{
+    margin-left: -10px;
+}
+.four-col-container ul li:last-child{
+    margin-right: -10px;
+}
+/* 资讯和要点 end  */
+
+/* 体验VMware Cloud start */
+.row {
+    height: 294px;
+    margin-top: 50px;
+}
+.block1 {
+    width:671px;
+    float: left;
+}
+.row img{
+    width: 473px;
+    height: 273px;
+    float: right;
+}
+.block1 h2 {
+    color: #1D428A;
+    margin-bottom: 37px;
+}
+.block1 h2:hover{
+    color: #0091da;
+}
+.block1 button{
+    width: 193px;
+    margin-top: 25px;
+}
+/* 体验VMware Cloud end */
+
+
+/* 客户案例 start */
+.customer{
+    height: 552px;
+}
+.image-wrapper {
+    background: url("../images/vmw-cust-story-chow-sang-sang.jpg") no-repeat;
+    height: 500px ;
+    background-size: cover;
+}
+.content-wrapper {
+    width: 506px;
+    height: 500px;
+    background: linear-gradient(to right, #545454, 80%, #363636);
+    float: left;
+    padding: 70px 40px 0;
+    box-sizing: border-box;
+}
+.content-wrapper h2{
+    color: #fff;
+    margin-bottom: 25px;
+}
+.content-wrapper p {
+    color: #fff;
+}
+.content-wrapper button {
+    margin-top: 25px;
+    color: #fff;
+    background-color: #545454;
+    border: 1px solid #fff;
+    width: 86px;
+}
+.content-wrapper button:hover {
+    background-color: #1d428a;
+    border: none;
+}
+.content-wrapper img{
+    width: 132px;
+    height: 66px;
+    display: block;
+    margin-top: 35px;
+}
+.customer a{
+    display: block;
+    margin: 15px 0;
+    width: 100%;
+    text-align: center;
+}
+/* 客户案例end */
+
+/* 技术文章  start */
+.article {
+    height: 700px;
+    position: relative;
+    padding-top: 20px;
+    margin-bottom: -7px;
+}
+.article .article-content {
+    position: absolute;
+    width: 563px;
+    height: 448px;
+    padding: 150px 0;
+    top: 0;
+    left: 60px;
+}
+.article-content h2{
+    margin-bottom: 10px;
+}
+.article-content p{
+    padding-bottom: 20px;
+}
+.article-content button {
+    width: 230px;
+}
+/* 技术文章  end */ 
+
+/* 下面的水平线 */
+.b-br img{
+    margin-top:0px;
+}
+/* footer start */
+footer {
+    padding: 25px 0 35px 0;
+}
+footer .logo{
+    height: 69px;
+    padding: 23px 0 25px 0;
+    box-sizing: border-box;
+}
+
+.ft-links li a {
+    color: #565656;
+    font-size: 20px;
+    float: left;
+    padding-right: 50px;
+    font-weight: 400;
+}
+.ft-links li a:hover{
+    color: #0091da;;
+}
+.fb-links {
+    margin-top: 45px;
+}
+.fb-links li{
+    float: left;
+    color: #565656;
+    font-size: 16px;
+    float: left;
+    padding-right: 20px;
+}
+.fb-links li a{
+    color: #565656;
+}
+.fb-links li a:hover{
+    color: #0091da;;
+}
+
+/* footer end */
